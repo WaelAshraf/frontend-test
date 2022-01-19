@@ -1,0 +1,95 @@
+ol {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  }
+
+  ol ol {
+    margin: 0 0 0 2em; /* Add some left margin for inner lists */
+  }
+  li
+  {
+    padding: 20px;
+    background-color: rgb(175, 171, 171);
+    margin: 40px;
+    width: 800px;
+    border: .2em solid rgb(131, 131, 131);
+  }
+  .rounded-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: rgb(175, 171, 171);
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+  }
+
+ 
+
+  .rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background:rgb(208, 206, 206);
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid rgb(208, 206, 206);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+  }
+
+  .column {
+    float: left;
+  }
+  
+  .left {
+    width: 25%;
+    background-color: rgb(191, 191, 191);
+    height: 900px;
+    border: .2em solid rgb(131, 131, 131);
+  }
+  
+  .right {
+    width: 75%;
+    position: absolute;
+    left: 25%;
+    background-color: rgb(231, 230, 230);
+    height: 900px;
+    border: .2em solid rgb(131, 131, 131);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    height: 900px;
+    position: relative;
+    
+ 
+  }
+  
+  .vertical-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 171, 171);
+    width: 25%;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
