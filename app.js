@@ -22,6 +22,4 @@ app.post(`/`, jsonParser,function(req, res){
 });
 
 
-app.listen(3000, function(){
-    console.log(`Server running`)
-})
+app.listen(process.env.PORT || 5000)
