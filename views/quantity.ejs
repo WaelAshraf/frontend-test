@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Frontend Test</title>
-      <!-- Main CSS-->
-      <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script>
     function sendQuantity()
     {
-       // event.preventDefault();
         var quantity =
         {
             quantity:document.getElementById("txtQuantity").value
         }
-        //console.log(quantity)
-
         $.ajax({
              url: '/',
              data: JSON.stringify(quantity),
@@ -25,14 +21,11 @@
              contentType: "application/json; charset=utf-8" ,
              type: 'POST',
              success: function(data){
-                // console.log("success");
              }
             })
              .done(function(result){
-              //  console.log(result)
                  var listDiv=document.getElementById("listDiv")
-                 listDiv.innerHTML=result
-            
+                 listDiv.innerHTML=result            
         });
     }
 </script>
@@ -42,24 +35,16 @@
     <div class="column left">
         <div class="vertical-center">
             <h3>Quantity</h3>
-           
             <input type="number"  id="txtQuantity" name="txtQuantity" onchange="sendQuantity()" placeholder="Add to list" value="<%= num %>">
-   
         </div>
-        
     </div>
-       
 <div class="column right">
     <ol class="rounded-list">
-    
         <% for (var i = 0; i <  num ; i++) { %>
             <li><a href=""></a></li>
         <% } %>
     </ol>
 </div>
-
 </div>
-
-
 </body>
 </html>
